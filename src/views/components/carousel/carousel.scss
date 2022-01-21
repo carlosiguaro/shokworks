@@ -1,0 +1,102 @@
+@import "../../../assets/scss/vairables";
+
+div.__carousel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    >div:first-child{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        >div.__card-viewport {
+            width: 320px;
+            min-width: 320px;
+            max-width: 320px;
+            min-height: 420px;
+            position: relative;
+
+            div.__cards-container{
+                transition: .2s;
+                display: flex;
+                flex-wrap: nowrap;
+                position: absolute;
+                left: var(--left);
+
+                div.__card {
+                    min-width: 320px;
+                    max-width: 320px;
+                    min-height: 420px;
+                    max-height: 420px;
+                    box-sizing: border-box;
+                    padding: 0 1em;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    box-shadow: $shadow;
+                    margin: 0 17px;
+                    overflow-y: auto;
+
+                    >div:first-child {
+                        width: 150px;
+                        min-width: 150px;
+                        max-width: 150px;
+                        height: 150px;
+                        min-height: 150px;
+                        max-height: 150px;
+                        border-radius: 50%;
+                        background-color: #C6BAF8;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        background-image: var(--bg);
+                        margin: 1em 0 1.5em 0;
+                    }
+                    >div:last-child {
+                        * { text-align: center; }
+                        >h3 {
+                            font-weight: normal;
+                            margin-bottom: 1.5em;
+                        }
+                        > p{
+                            font-size: .8em;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    >div:last-child{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 130px;
+        >button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background-color: #FFFFFF;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            box-shadow: 0px 10px 30px #99999933;
+            transition: .2s;
+            &:hover{
+                background-color: #f2f2f2;
+            }
+
+            &:first-child{
+                margin-right: 1em;
+                background-image: url('./../../../assets/images/icons/arrow-left.svg');
+            }
+            &:last-child{ 
+                margin-left: 1em; 
+                background-image: url('./../../../assets/images/icons/arrow-right.svg');
+
+            }
+        }
+    }
+}

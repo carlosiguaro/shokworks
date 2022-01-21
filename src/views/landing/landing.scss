@@ -1,0 +1,615 @@
+@import "./../../assets/scss/vairables";
+// @import "./../../assets/scss/components";
+
+main.container{
+    width: 100vw;
+    >section {
+        width: 100%;
+        
+        >div:not(.presentation) { 
+            min-height: 100vh;
+            box-sizing: border-box;
+            padding: 2em 0;
+        }
+
+        >div.presentation {
+            min-height: calc(100vh - 151.9px);
+            display: flex;
+            justify-content: center;
+
+            background-image: url("../../assets/images/square-bg.svg");
+            background-size: 100% 99%;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            >div {
+                display: flex;
+                align-items: center;
+                >div {
+                    >img { 
+                        width: 400px;
+                    }
+                    >h2 {
+                        text-align: center;
+                        font-weight: bold;
+                        margin: 1.5em 0 1em;
+                    }
+                    >div {
+                        display: flex;
+                        justify-content: center;
+                        >button {
+                            width: 140px;
+                            padding: 10px 20px;
+                            font-size: 16px;
+                            &:first-child{
+                                margin-right: 23.42px;
+                            }
+                            &:last-child{
+                                margin-left: 23.42px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        >div.services{
+            >div {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                padding: 2em 0;
+                >img {
+                    width: 460px;
+                }
+                >div{
+                    h2 {
+                        font-size: 37px;
+                        font-weight: normal;
+                    }
+                    >p {
+                        font-size: 13px; 
+                        margin: 36px 0;
+                    }
+                }
+            }
+        }
+
+        >div.services-details {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            >div{
+                width: 100%;
+                position: relative;
+                >h1 {
+                    text-align: center;
+                    font-weight: normal;
+                    margin-bottom: 1.5em;
+                    font-size: 1.95em;
+                    >span {
+                        font-weight: bold;
+                    }
+                }
+                >div {
+                    width: 100%;
+                    position: relative;
+                }
+            }
+        }
+
+        >div.associated{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            >div{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                >h1 {
+                    text-align: center;
+                    margin-bottom: 1.5em;
+                    font-size: 1.95em;
+                }
+                >div {
+                    display: flex;
+                    justify-content: center;
+                    >div {
+                        display: flex;
+                        flex-direction: column;
+                        >div.card-container {
+
+                            &:first-child{
+                                >div:first-child{
+                                    &::before{
+                                        background-image: url('./../../assets/images/big-immersity-logo.png');
+                                        background-size: 160px;
+                                    }
+                                }
+                                >div:nth-child(2){
+                                    &::before{
+                                        background-image: url('./../../assets/images/logo_ipass.png');
+                                        background-size: 180px;
+                                    }
+                                }
+                                >div:last-child{
+                                    &::before{
+                                        background-image: url('./../../assets/images/logo-rojo.png');
+                                        background-size: 135px;
+                                    }
+                                }
+                            }
+
+                            &:last-child{ 
+                                margin-top: 2em;
+                                >div:first-child{
+                                    &::before{
+                                        background-image: url('./../../assets/images/logo_splash.svg');
+                                        background-size: 150px;
+                                    }
+                                }
+                                >div:nth-child(2){
+                                    &::before{
+                                        background-image: url('./../../assets/images/mobile.png');
+                                        background-size: 70px;
+                                    }
+                                }
+                                >div:last-child{
+                                    &::before{
+                                        background-image: url('./../../assets/images/good-time.svg');
+                                        background-size: 180px;
+                                    }
+                                }
+                            }
+                            
+                            display: flex;
+                            flex-wrap: nowrap;
+                            >div {
+                                width: 250px;
+                                height: 250px;
+                                background-color: #FFFFFF;
+                                box-shadow: 0px 10px 30px #99999933;
+                                display: flex;
+                                align-items: flex-end;
+                                position: relative;
+                                &::before{
+                                    @include init-psd-e(100%, 200px);
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+
+                                    top: 0;
+                                    left: 0;
+                                }
+
+                                >div {
+                                    min-height: 50px;
+                                    max-height: 50px;
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    >a {
+                                        font-size: .9em;
+                                        color: #185F7F;
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    position: relative;
+                                    top: -1em;
+                                    margin: 0 1.5em;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        >div.comments {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            >div {
+                display: flex;
+                justify-content: center;
+                width: inherit;
+                >div {
+                    width: 100%;
+                    >h1 {
+                        text-align: center;
+                        font-weight: normal;
+                        margin-bottom: 1.5em;
+                        font-size: 1.95em;
+                        >span {
+                            font-weight: bold;
+                        }
+                    }
+                    >div { // icon 1
+                        width: inherit;
+                        position: relative;
+                        >div { //icon 2
+                            position: relative;                            
+                            width: inherit;
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        div.report-problem {
+            background-color: #DFF0FF;
+            background-image: url('./../../assets/images/square-bg.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+
+            &::after{
+                @include init-psd-e(50%, 50%);
+                right: 5%;
+                bottom: 10%;
+                background-color: transparent;
+                background-image: url('./../../assets/images/banner-1.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 60%;
+            }
+
+            >h1 {
+                text-align: center;
+            }
+            >div{
+                display: flex;
+                >form {
+                    position: relative;
+                    margin: 5% 0 0 50px;
+                    background-color: #FFFFFF;
+                    box-shadow: $shadow;
+                    padding: 2em;
+                    width: 500px;
+                    position: relative;
+                    z-index: 1;
+                    
+                    div.form-control{
+                        display: flex;
+                        flex-direction: column;
+                        &:nth-child(2){
+                            margin-bottom: 2em;
+                        }
+
+                        label { 
+                            font-size: .9em; 
+                        }
+                        input, textarea{
+                            border:0;
+                            font-size: 1em;
+                            border-bottom: 1px solid #eaeaea;
+                            padding: 1em 0;
+                            &:focus { outline: 0; }
+                            &::placeholder{ font-size: .9em; }
+                        }
+                        input {
+                            margin-bottom: 1.5em;
+                            font-size: .89;
+                            
+                        }
+                        textarea {
+                            min-height: 3.5em;
+                            resize: none;
+                        }
+                    }
+                    >button{
+                        padding: 10px 20px!important;
+                        font-size: 15px;
+                    }
+                }
+            }
+
+        }
+
+        >footer:last-child{
+            position: relative;
+            &::before{
+                @include init-psd-e(100%, 150px, relative);
+                display: inline-block;
+                background-image: url("./../../assets/images/icons/app-logo.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 350px;
+            }
+
+            >div:first-child{
+                display: flex;
+                justify-content: center;
+                padding: 1em 0;
+                position: relative;
+                z-index: 10000;
+                >div {
+                    width: 80%;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    >div:first-child{
+                        width: 75%;
+                        display: flex;
+                        justify-content: space-evenly;
+                        >ul {
+                            &:first-child>li:nth-child(2) {
+                                display: flex;
+                                align-items: center;
+                                >object {
+                                    margin-right: .5em;
+                                }
+                            }
+                            >li { font-size: .8em; }
+                            >li:first-child{
+                                font-weight: bold;
+                            }
+                            >li:not(:last-child){
+                                margin-bottom: .9em;
+                            }
+                        }
+                    }
+                    >div:last-child{
+                        width: 25%;
+                        >* {
+                            font-size: .8em;
+                        }
+                        >label {
+                            font-weight: bold;
+                        }
+                        >p {
+                            margin: .7em 0;
+                        }
+                        >ul {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            padding-top: 1em;
+                            >li{
+                                width: 45px;
+                                height: 45px;
+                                border-radius: 50%;
+                                background-color: pink;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-repeat: no-repeat;
+                                background-position: center;
+
+                                &:first-child{ 
+                                    background-color: #7d69d9;
+                                    background-image: url("./../../assets/images/icons/facebook.svg");
+                                    background-size: 10px;
+                                }
+                                &:nth-child(2){ 
+                                    background-color:#5bc67d;
+                                    background-image: url("./../../assets/images/icons/skype.svg");
+                                    background-size: 25px;
+                                }
+                                &:nth-child(3){ 
+                                    background-color:#ec64a5;
+                                    background-image: url("./../../assets/images/icons/linkedin.svg");
+                                    background-size: 15px;
+                                }
+                                &:last-child{ 
+                                    background-color: #f09d76;
+                                    background-image: url("./../../assets/images/icons/instagram.svg");
+                                    background-size: 23px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            >div:last-child{
+                height: 180px;
+                width: 100%;
+                background-color: transparent;
+                background-image: url('./../../assets/images/square-bg.svg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: relative;
+                &::before{
+                    @include init-psd-e(100%, 212px);
+                    background-color: #DFF0FF;
+                    bottom: -63px;
+                    left: 0;
+                    transform: skew(0deg, -6deg);
+                    z-index: 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    main.container{
+        >section {
+            >div.services{
+                >div {
+                    >img { width: 290px;  }
+                    >div{
+                        h2 {
+                            font-size: 27px;
+                        }
+                        >p {
+                            font-size: 12px; 
+                        }
+                        >button {
+                            padding: .8em 1em;
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+
+            >div.associated{
+                >div
+                    >div 
+                        >div 
+                            >div.card-container 
+                                >div {
+                                    width: 200px;
+                                    height: 200px;
+                }
+            }
+            >footer{
+                >div:first-child{
+                    >div {
+                        width: 90%!important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    main.container{
+        >section {
+
+            >div.presentation {
+                min-height: calc(100vh - 100px);
+                >div {
+                    >div {
+                        >img { 
+                            width: 300px;
+                        }
+                        >h2 {
+                            font-size: 27px;
+                        }
+                        button {
+                            padding: .5em 1em!important;
+                            width: initial!important;
+                        }
+                    }
+                }
+            }
+
+
+            >div.services{
+                >div {
+                    flex-direction: column;
+                    &:last-child{
+                        flex-direction: column-reverse;
+                    }
+                    >img { width: 290px;  }
+                    >div{
+                        width: 85%;
+                        h2 {
+                            font-size: 27px;
+                        }
+                        >p {
+                            font-size: 12px; 
+                        }
+                        >button {
+                            padding: .8em 1em;
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+
+            >div.associated{
+                >div{
+                    >div {
+                        >div {
+                            display: flex;
+                            flex-direction: column;
+                            >div.card-container { 
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: space-evenly;
+                                &:last-child{
+                                    margin: 0!important;
+                                }
+                                >div {
+                                    margin: 0 1em 1em!important;
+                                    width: 220px;
+                                    height: 220px;
+                                    &:nth-child(2){
+                                        margin: 0;
+                                        top: 0!important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+
+
+            >div.comments {
+                >div {
+                    >div {
+                        >h1 {
+                            text-align: center;
+                            font-weight: normal;
+                            margin-bottom: 1.5em;
+                            font-size: 1.95em;
+                            >span {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            div.report-problem {
+                &::after{
+                    right: 0;
+                    bottom: 0;
+                    background-size: 50%;
+                }
+                >div{
+                    justify-content: center;
+                    >form {
+                        margin: 3em 0 0;
+                        width: 80%;
+                    }
+                }
+            }
+
+            >footer{
+                >div:first-child{
+                    display: flex;
+                    >div {
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%!important;
+                        >div:first-child{
+                            justify-content: space-around!important;
+                            width: 90%!important;
+                            >ul {    
+                                li{
+                                    font-size: .7em!important;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        >div:last-child{
+                            width: 70%!important;
+                            >ul{
+                                justify-content: right!important;
+                                >li:not(:last-child) {
+                                    margin-right: .9em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

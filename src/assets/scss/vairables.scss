@@ -1,0 +1,22 @@
+$black: #101C21;
+$black1: #555555;
+$black2: #777777;
+$blue: #185F7F;
+$grandieBlue: transparent linear-gradient(248deg, #1B92C8 0%, #2C3636 100%) 0% 0% no-repeat padding-box;
+$shadow: 0px 10px 30px #99999933;
+
+@mixin init-psd-e($w, $h, $p: absolute) {
+    content: '.';
+    color: transparent;
+    width: $w;
+    height: $h;
+    position: $p;
+}
+
+@mixin coat-psd-e() {
+    @include init-psd-e(100%, 100%, absolute);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+

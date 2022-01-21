@@ -1,0 +1,191 @@
+@import "./vairables";
+
+header.__header{
+    height: 151.9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+
+    >div:first-child{
+        margin-left: 3.12%;
+        >img {
+            width: 331.23px;
+        }
+    }
+
+    >input ,>button{ display: none }
+
+    >div:last-child{
+        background-color: #FFFFFF;
+        >div {
+            display: flex;
+            flex-direction: row-reverse;
+            >ul {
+                display: flex;
+                align-items: center;
+                &:first-child{
+                    >li {
+                        >input {
+                            border: 1px solid #C6BAF8;
+                            border-radius: 4px;
+                            font-size: 14px;
+                            padding: 15px 21px;
+                            color: $black;
+                            max-width: 326px;
+                        }
+                        >button{
+                            white-space: nowrap;
+                        }
+                        &:first-child { margin-right: 42.17px; }
+                    }
+                    margin-right: 12.76%;
+                }
+                &:last-child{
+                    >li {
+                        margin-right: 42px;
+                        >a {
+                            font-size: 17px;
+                            color: $black1;
+                            position: relative;
+
+                            &.active{
+                                color: $blue;
+                                font-weight: bold;
+                                &::after{
+                                    @include init-psd-e(10px, 10px);
+                                    background-color: $blue;
+                                    left: 50%;
+                                    top:100%;
+                                    margin-top: 4px;
+                                    border-radius: 50%;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                            &:hover{
+                                color: $blue;
+                                &::after{
+                                    @include init-psd-e(10px, 10px);
+                                    background-color: $blue;
+                                    left: 50%;
+                                    top:100%;
+                                    margin-top: 4px;
+                                    border-radius: 50%;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+div.__carousel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    >div:first-child{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        >div.__card-viewport {
+            width: 320px;
+            min-width: 320px;
+            max-width: 320px;
+            min-height: 420px;
+            position: relative;
+
+            div.__cards-container{
+                transition: .2s;
+                display: flex;
+                flex-wrap: nowrap;
+                position: absolute;
+                left: var(--left);
+
+                div.__card {
+                    min-width: 320px;
+                    max-width: 320px;
+                    min-height: 420px;
+                    max-height: 420px;
+                    box-sizing: border-box;
+                    padding: 0 1em;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    box-shadow: $shadow;
+                    margin: 0 17px;
+                    overflow-y: auto;
+
+                    >div:first-child {
+                        width: 150px;
+                        min-width: 150px;
+                        max-width: 150px;
+                        height: 150px;
+                        min-height: 150px;
+                        max-height: 150px;
+                        border-radius: 50%;
+                        background-color: #C6BAF8;
+                        margin: 1em 0 1.5em 0;
+                    }
+                    >div:last-child {
+                        * { text-align: center; }
+                        >h3 {
+                            font-weight: normal;
+                            margin-bottom: 1.5em;
+                        }
+                        > p{
+                            font-size: .8em;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    >div:last-child{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 130px;
+        >button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background-color: #FFFFFF;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            box-shadow: 0px 10px 30px #99999933;
+            transition: .2s;
+            &:hover{
+                background-color: #f2f2f2;
+            }
+
+            &:first-child{
+                margin-right: 1em;
+                background-image: url('./../images/icons/arrow-left.svg');
+            }
+            &:last-child{ 
+                margin-left: 1em; 
+                background-image: url('./../images/icons/arrow-right.svg');
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

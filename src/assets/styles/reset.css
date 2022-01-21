@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+}
+body { overflow-x: hidden; }
+
+body > div#root { overflow: hidden; }
+
+::-webkit-scrollbar {
+    width: 8px;  
+} 
+::-webkit-scrollbar-track {
+    background: #fff; 
+}   
+::-webkit-scrollbar-thumb {
+    background: #185F7F;
+    border-radius: 8px;
+}
+
+button:focus, 
+input:focus, 
+select:focus {
+    outline: 0;
+    border: none;
+    box-shadow: normal;
+}
+
+a { text-decoration: none; }
+
+a, 
+p, 
+label, 
+span,
+li,
+input[type="text"],
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 { color: #222222;  }
+
+a,
+li,
+p, 
+label, 
+button,
+input,
+textarea { font-family: 'Poppins', sans-serif; }
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h5 { font-family: 'Montserrat', sans-serif; }
+
+li { list-style: none; }
+
+a, button { cursor: pointer; }
+
+button.btn {
+    padding: 15px 40px;
+    font-size: 17px;
+    border-radius: 3px;
+}
+button.primary {
+    background: transparent linear-gradient(248deg, #1B92C8 0%, #2C3636 100%) 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+    border: 1px solid #185F7F;
+}
+
+button.outline {
+    color: #185F7F;
+    border: 1px solid #185F7F;
+    background-color: #FFFFFF;
+}

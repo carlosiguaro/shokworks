@@ -1,0 +1,182 @@
+@import "../../../assets/scss/vairables";
+
+div.__comments{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+
+    &::before,
+    &::after,
+    >div::before,
+    >div::after{
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+    &::before{ 
+        @include init-psd-e(50px, 50px);
+        top: 45%;
+        left: 10px;
+        background-image: url('../../../assets/images/ellipse346.png'); 
+    }
+    &::after{ 
+        @include init-psd-e(75px, 75px);
+        bottom: 10px;
+        left: 150px;
+        background-image: url('../../../assets/images/ellipse347.png'); 
+    }
+
+    >div{
+        width: 100%;
+        position: relative;
+
+        &::before{ 
+            @include init-psd-e(75px, 75px);
+            top: 0;
+            right: 150px;
+            background-image: url('../../../assets/images/ellipse348.png'); 
+        }
+        &::after{ 
+            @include init-psd-e(50px, 50px);
+            top: 50%;
+            right: 10px;
+            background-image: url('../../../assets/images/ellipse350.png'); 
+        }
+
+        display: flex;
+        justify-content: center;
+        >div {
+            min-width: 700px;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            >div:first-child {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+
+                background-image: var(--bg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            >div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 1em 0;
+                >p {
+                    margin: 1em 0 1.2em;
+                    padding: 0 40px;
+                    min-width: 320px;
+                    position: relative;
+                    text-align: center;
+                    &::after, &::before{
+                        @include init-psd-e(30px, 30px);
+                        top: 0;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                    }
+                    &::before{
+                        left: 0;
+                        background-image: url('./../../../assets/images/icons/quote-left.svg'); 
+                    }
+                    &::after{ 
+                        right: 0;
+                        background-image: url('./../../../assets/images/icons/quote-right.svg'); 
+                    }
+                    
+                }
+                >label:nth-child(2){ 
+                    font-weight: bold;
+                    margin-bottom: .5em;
+                }
+                >label:last-child{
+                    font-size: .9em;
+                    color: $black1;
+                }
+            }
+
+            >div:last-child{
+                >button {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: none;
+                    background-color: #FFFFFF;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 16px;
+                    box-shadow: 0px 10px 30px #99999933;
+                    transition: .2s;
+                    &:hover{
+                        background-color: #f2f2f2;
+                    }
+        
+                    &:first-child{
+                        margin-right: 1em;
+                        background-image: url('./../../../assets/images/icons/arrow-left.svg');
+                    }
+                    &:last-child{ 
+                        margin-left: 1em; 
+                        background-image: url('./../../../assets/images/icons/arrow-right.svg');
+        
+                    }
+                }
+            }
+        }
+
+    }
+}
+@media (max-width: 767px) {
+    div.__comments{
+        &::before{ 
+            @include init-psd-e(40px, 40px);
+            opacity: .7;
+            top: 45%;
+            left: 10px;
+        }
+        &::after{ 
+            @include init-psd-e(55px, 55px);
+            opacity: .7;
+            bottom: 10px;
+            left: 40px;
+        }
+
+        >div { //icon 2
+            &::before{ 
+                @include init-psd-e(57px, 57px);
+
+                opacity: .7;
+                top: 0;
+                right: 15px;
+            }
+            &::after{ 
+                @include init-psd-e(35px, 35px);
+
+                opacity: .7;
+                top: 50%;
+                right: 5px;
+            }
+
+            >div{
+                min-width: 95%;
+                max-width: 95%;
+                p {
+                    min-width: initial!important;
+                    font-size: .8em;
+                }
+            }
+
+        }
+    }
+}
