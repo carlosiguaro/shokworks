@@ -1,19 +1,14 @@
 class Data {
-
-    #signal;
     
-    constructor(signal){
-        this.#signal = signal;
-    }
+    #signal;
+    constructor(signal){ this.#signal = signal; }
 
     async fetch(url) {
         const res = await fetch(url, {signal: this.#signal});
         return res.json();
     }
 
-    response(status, message) {
-        return {status, message};
-    }
+    response(status, message) { return {status, message}; }
 
     async getData (urls) {
         try {
@@ -29,10 +24,8 @@ class Data {
     }
     
     async _services() {
-        const urls = ['https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=793dba4852704c1083ec53961fc6195d'];
-
         try {
-            const data = await this.getData(urls);
+            const data = await this.getData(['https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=793dba4852704c1083ec53961fc6195d']);
 
             if (data?.status === 'error') throw new Error(data.message);
             
@@ -46,14 +39,12 @@ class Data {
     }
 
     async _comments() {
-        const urls = [
-            'https://jsonplaceholder.typicode.com/comments',
-            'https://jsonplaceholder.typicode.com/users',
-            'https://jsonplaceholder.typicode.com/photos'
-        ];
         try {
-            
-            const data = await this.getData(urls);
+            const data = await this.getData([
+                'https://jsonplaceholder.typicode.com/comments',
+                'https://jsonplaceholder.typicode.com/users',
+                'https://jsonplaceholder.typicode.com/photos'
+            ]);
             
             if (data?.status === 'error') throw new Error(data.message || 'Error al obtener datos desde la API');
 
